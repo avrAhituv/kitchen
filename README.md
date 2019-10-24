@@ -1,5 +1,9 @@
 # Kitchen
 
+App for the kitchen.
+
+Includes: shopping list, recipe search, calendar, contacts and music.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.6.
 
 ## Development server
