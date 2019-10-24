@@ -1,0 +1,12 @@
+<mat-list *ngIf="results.length">
+    <mat-list-item *ngFor="let r of results" (click)="openLink(r)">
+        <img matListAvatar [src]="getImage(r)" alt="...">
+        <h3 matLine [innerHTML]="getHtml(r.htmlTitle)"></h3>
+        <p matLine [innerHTML]="getHtml(r.htmlSnippet)"></p>
+    </mat-list-item>
+</mat-list>
+<div *ngIf="!results.length">
+    <h4>
+        לא נמצאו תוצאות.
+    </h4>
+</div>

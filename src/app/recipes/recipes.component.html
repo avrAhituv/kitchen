@@ -1,0 +1,25 @@
+<div class="page">
+    <div class="header">
+        <h2>חיפוש מתכונים</h2>
+    </div>
+    <div class="row search-area">
+        <div class="input-search">
+            <button mat-mini-fab color="accent" (click)="activateSpeechSearch()">
+                <i class="material-icons">
+                    keyboard_voice
+                </i>
+            </button>
+            <mat-form-field>
+                <input matInput placeholder="חיפוש חופשי" [(ngModel)]="inputSearch" (keyup.enter)="search()">
+            </mat-form-field>
+            <button mat-raised-button color="primary" (click)="search()">חיפוש</button>
+        </div>
+    </div>
+    <div class="row col-12 results-area" *ngIf="result">
+        <app-list-results class="col-6" [results]="result" (itemSelected)="onItemSelected($event)"></app-list-results>
+        <div class="col-6 iframe-wrapper" *ngIf="isSelected">
+            <button mat-raised-button color="default" (click)="openInFullScreen()">מסך מלא</button>
+            <iframe [src]="showPageInIframe(currentItemSelected.link)"></iframe>
+        </div>
+    </div>
+</div>
