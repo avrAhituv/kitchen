@@ -11,7 +11,7 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./recipes.component.scss']
 })
 export class RecipesComponent implements OnInit, OnDestroy {
-  // AIzaSyBWb-bZ_6lHtbAPM3JVXSzciqzfR_4enuo API KEY FOR CUSTOM SEARCH
+  
   showSearchButton: boolean;
   inputSearch: string;
   result: Array<SearchResult> = [];

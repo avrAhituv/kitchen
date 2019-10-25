@@ -10,7 +10,7 @@ import { map } from 'rxjs/operators';
 export class CustomGoogleSearchService {
 
   url = 'https://www.googleapis.com/customsearch/v1?';
-  googleKey = 'AIzaSyBWb-bZ_6lHtbAPM3JVXSzciqzfR_4enuo';
+  googleKey = '';
   customSearchId = '012518412110002425811:7daj9rn7grt';
 
   resultItemsChanged: Observable<Array<SearchResult>>;
