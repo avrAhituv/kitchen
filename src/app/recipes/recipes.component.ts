@@ -1,9 +1,9 @@
-import { Component, OnInit, OnDestroy, SecurityContext } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { SpeechRecognitionService } from '../shared/services/speech-recognition.service';
-import { CustomGoogleSearchService } from './services/custom-google-search.service';
-import { SearchResult } from './classes/search-result';
+import { CustomGoogleSearchService, CustomSearchEngineEnum } from '../shared/services/custom-google-search.service';
 import { Subscription } from 'rxjs';
 import { DomSanitizer } from '@angular/platform-browser';
+import { SearchResult } from '../shared/classes/search-result';
 
 @Component({
   selector: 'app-recipes',
@@ -24,6 +24,7 @@ export class RecipesComponent implements OnInit, OnDestroy {
   constructor(private speechRecognitionService: SpeechRecognitionService, private googleSearch: CustomGoogleSearchService, private sanitizer: DomSanitizer) {
     this.showSearchButton = true;
     this.inputSearch = '';
+    this.googleSearch.currentCustomSearch = CustomSearchEngineEnum.Recipes;
     this.resultSub = this.googleSearch.resultItemsChanged.subscribe(result => this.result = result);
     this.totalSub = this.googleSearch.totalItemsCountChanged.subscribe(total => this.totalResult = total);
   }
@@ -85,7 +86,7 @@ export class RecipesComponent implements OnInit, OnDestroy {
     console.log(url)
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
-  openInFullScreen(){
-    
+  openInFullScreen(url){
+    window.open(url, 'winname', 'directories=no,titlebar=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=1100,height=750');
   }
 }

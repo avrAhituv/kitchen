@@ -1,0 +1,52 @@
+.header{
+    font-family: 'Heebo';
+    text-align: center;
+    padding: 30px 65px !important; 
+    background-color: #670066;
+    color: white;
+    font-size: 20px;   
+    .title{       
+        font-size: 26px;
+        font-weight: 600;
+        text-align: center;
+        font-family: 'Heebo';
+        a, a:hover,a:active{
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
+.logo{
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    word-wrap: normal;
+    margin: 20px 0;
+    .logo3{
+        margin-left: 30px;
+    }
+    img{
+        width: 140px;
+        height: 130px;
+    }
+    .logo-new{      
+            width: 100%;     
+    }
+}
+
+@media screen and (min-width: 600px) {
+  
+    img{
+       width: 200px !important;
+       height: 186px !important;
+    }
+    .logo{
+        margin: 30px 0 !important;
+    }
+    .logo-new{    
+        width: 700px !important;   
+    }
+  
+
+}
+

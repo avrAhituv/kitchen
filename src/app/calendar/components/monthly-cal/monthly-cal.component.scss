@@ -1,0 +1,247 @@
+.calender{
+    margin:5px 25px;
+    text-align:center;
+   
+  }
+  .table{
+    background: rgb(255,255,255,0.7);
+  }
+  table.month-cal{
+    table-layout: fixed;
+    margin-top: 10px;
+}
+  .month-cal > tbody > tr > td {
+    margin: 0;
+    padding: 0;
+}
+.cal-day{
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.month-cal > tbody > tr > td{
+  margin: 0;
+  padding: 0;
+  height:80px;
+}
+.en-date {
+  position: absolute;
+  left: 1px;
+  top: 1px; 
+  font-size: 14px;
+}
+.he-date {
+  position: absolute;
+  right: 1px;
+  bottom: 1px;  
+  color: blue;
+  font-weight: bold;
+  font-size: 14px;
+}
+.data-cell .label{   
+    display: block;
+    // padding: 2px 2px 2px 1px;
+    margin: 1px 0;
+    font-size: 12px;
+  }
+  .data-cell {
+    padding: 20px 2px 16px 0;
+}
+.table>thead>tr>th {
+  padding: 6px;
+  line-height: 1.846;
+  vertical-align: top;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  font-size: 16px;
+}
+.wrapper-cell-day{
+  position: relative;
+  min-height: 85px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+  .wrapper-day {
+    position: relative;
+    min-height: 80px;
+    margin: 0;
+    padding: 0;   
+}
+.today{
+  background-color: aquamarine;
+}
+.select-day{
+  background-color: rgb(200, 250, 233);
+}
+.label0{
+  background-color: #b998ef;
+}
+.label1{
+  background-color: #e941c4;
+  color: white;
+}
+.label2{
+  background-color: #b41ad0;
+  color: white;
+}
+.label3{
+  background-color: #fd3345;  
+  color: white;
+}
+.label4{
+  background-color: #14a907;
+  color: white;
+}
+.label5{
+  background-color: #3c9234;
+}
+.label6{
+  background-color: #17fb02;
+  color: white;
+}
+.label7{
+  background-color: #1dbce0;
+}
+.label8{
+  background-color: #362488;
+  color: white;
+}
+.label9{
+  background-color: #411bed;
+  color: white;
+}
+.label10{
+  background-color: #080615;
+  color: white;
+}
+.label11{
+  background-color: #8a78db;
+}
+.label12{
+  background-color: #eb410ee1;
+  color: white;
+}
+.label13{
+  background-color: #8f2606e1;
+  color: white;
+}
+.label14{
+  background-color: #ddcc33;
+}
+.label15{
+  background-color: #f0d808;
+}
+.label16{
+  background-color: #eb4288ef;
+}
+.label17{
+  background-color: #40fd06;
+}
+.label18{
+  background-color: #479973;
+}
+.label19{
+  background-color: #3d7e97;
+}
+.label20{
+  background-color: #9de0a3;
+}
+.label21{
+  background-color: #ebfc02;
+}
+.label22{
+  background-color: #ddcc33;
+}
+.label23{
+  background-color: #ddcc33;
+}
+.label-event{
+  background:linear-gradient(to left, #ecc4eca6,#ffffff);    
+  border-right: 4px solid #3f014a;
+  color: #700484;   
+  text-align: right;
+  padding: 0 5px;
+  span{
+    font-size: 12px;
+  }
+}
+.label-shabat{
+    background-color: inherit;
+    color: black;
+    font-weight: bold;
+    font-size: 14px !important;
+}
+.label-times{
+  background-color: inherit;
+  color: black; 
+  position: absolute;
+  bottom:1px;
+  left: 1px;
+}
+
+.day-times{
+  margin-top: 60px;
+  padding: 10px 15px;
+  font-size: 16px;
+  position: relative;
+  width: 30%;
+  display: inline-block;
+  /* border: #8a78db solid 1px; */
+}
+// .calender{
+// //   position: relative;
+// //   width: 100%;
+// //   display: inline-block;
+// //   vertical-align: top;
+// }
+// .calender-page{
+//   //background-color: #fbfbfb;
+//   //direction: rtl;
+// }
+.material-icons{
+    color: white;
+}
+.hader-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    vertical-align: middle;
+    h4{
+        margin: 0 25px;
+    }
+    button{
+        margin: 0 5px;
+        height: 35px;
+    }
+    .month-header{
+        flex-direction: column;
+    }
+}
+.btn-in-modal{
+  background: #b10050;
+  color: #fff;
+  border-radius: 3px;
+  font-size: 1.2rem;
+  padding: 6px 15px;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
+  line-height: 1;
+}
+
+@media (min-width:1400px){
+  .wrapper-cell-day,.wrapper-day{   
+    min-height: 125px;   
+  }
+}
+
+.font-bold{
+  font-weight: bold;
+}
+.event-time{
+
+}

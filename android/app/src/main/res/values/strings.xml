@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">המטבח החכם</string>
+    <string name="title_activity_main">המטבח החכם</string>
+    <string name="package_name">kitchenappp.ahituv.com</string>
+    <string name="custom_url_scheme">kitchenappp.ahituv.com</string>
+</resources>

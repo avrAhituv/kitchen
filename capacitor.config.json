@@ -1,0 +1,8 @@
+{
+  "appId": "kitchenappp.ahituv.com",
+  "appName": "המטבח החכם",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "dist/kitchen",
+  "cordova": {}
+}

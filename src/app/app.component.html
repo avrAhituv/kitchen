@@ -1,2 +1,17 @@
-<router-outlet></router-outlet>
-<app-recipes></app-recipes>
+<div class="wrapp-app">
+    <!--  [style.background]="getCurrImg()" -->
+    <app-header></app-header>
+    <div class="content">
+        <ng-container *ngIf="isInFocus; else elseTemplate">
+            <router-outlet></router-outlet>
+        </ng-container>
+        <ng-template #elseTemplate>
+            <div class="img-wrapp">
+                <div class="img-div">
+                    <img src="../assets/img/bracha.jpg" alt="ברכה" width="100%" class="move">
+                </div>
+            </div>
+        </ng-template>
+    </div>
+    <app-footer></app-footer>
+</div>

@@ -1,0 +1,77 @@
+
+<div class="calender-page">
+  <div class="calender" *ngIf="tableRows && tableRows.length">
+    <div class="row hader-nav">
+      <div>
+        <button class="btn btn-outline-secondary btn-sm" (click)="setToday()">היום</button>
+      </div>
+        <button class="btn btn-primary btn-sm" tooltip="שנה קודמת" (click)="prevYear()">
+            <i class="material-icons">fast_forward</i>            
+        </button>
+        <button class="btn btn-primary btn-sm" tooltip="חודש קודם" (click)="prevMonth()">
+            <i class="material-icons">chevron_right</i>
+        </button>
+        <div class="month-header">
+          <h4 class="strong cal-header">{{header}}</h4>
+          <h6 class="strong cal-sub-header">{{subHeader}}</h6>
+        </div>        
+        <button class="btn btn-primary btn-sm" tooltip="חודש הבא" (click)="nextMonth()">        
+            <!-- חודש הבא -->
+            <i class="material-icons">chevron_left</i> 
+        </button>
+        <button class="btn btn-primary btn-sm" tooltip="שנה הבאה" (click)="nextYear()">        
+           <!-- שנה הבאה -->
+            <i class="material-icons">fast_rewind</i> 
+        </button>
+    </div>
+    <table class="table  table-bordered month-cal">
+      <thead>
+          <tr class="calendar-days"><th>ראשון</th><th>שני</th><th>שלישי</th><th>רביעי</th><th>חמישי</th><th>שישי</th><th>שבת</th></tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of tableRows">       
+              <td *ngFor="let cell of row" [ngClass]="cell.classes">
+                  <ng-container  *ngIf="cell.isInMonth; else emptyDay"  >
+                    <div class="wrapper-cell-day" (click)="addEvent(cell)" >
+                      <!--  (contextmenu)="addEvent($event,cell);false" -->
+                      <span class="en-date">{{cell.date}}</span>
+                      <div class="wrapper-day"  *ngIf="cell.events && cell.events.length" >
+                        <div class="data-cell">                   
+                          <div *ngFor="let e of cell.events" (click)="showEvent($event,e)" class="label label-info label-cal" [ngClass]="e.classes">
+                            <ng-container *ngIf="e.eventId; else eTemplate">
+                              <span class="font-bold"> {{e.value}}</span> <span class="event-time"> ({{getTimeToString(e.event)}})</span>
+                            </ng-container>
+                            <ng-template #eTemplate>
+                                {{e.value}}
+                            </ng-template>                                                                        
+                          </div>
+                        </div>                      
+                      </div>
+                      <span class="he-date">{{cell.heDate}}</span>
+                    </div>
+                  </ng-container>    
+              </td> 
+          <ng-template #emptyDay>
+  
+          </ng-template>
+        </tr>
+      </tbody>
+    </table>
+   
+  </div>
+ 
+  </div> 
+  <ng-template #userAddEventDenied>
+      <div class="modal-body">
+          <div class="alert alert-info">
+            <p>אופס..<br/>
+              איך נוכל לשמור עבורכם את אירועים ביומן, אם אינכם רשומים??<br/>
+              מוזמנים בחום להתחבר בחזרה, או להירשם ולהצטרף למשפחה שלנו<br/>
+              (זה בחינם.. וזה לוקח דקה אחת בדיוק..)<br/>
+              <button class="btn btn-in-modal" (click)="redirectToLogin()">לחצו כאן כדי להתחבר או להירשם</button>
+            </p>
+          </div>
+        </div>
+  </ng-template>
+  
+  

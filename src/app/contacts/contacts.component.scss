@@ -1,0 +1,77 @@
+.page{
+    margin: 20px 25px;
+    h2{
+        color: white;
+        font-weight: bold;
+    }
+    .search-container{
+        display: flex;
+    justify-content: center;
+    width: 100%;
+    .mat-form-field{
+        width: 50%;
+    }
+    }
+    .mat-list-base{
+        display: flex;
+        flex-direction: row;
+        vertical-align: middle;
+        flex-wrap: wrap;
+    }
+    .mat-list-base .mat-list-item.mat-2-line, .mat-list-base .mat-list-option.mat-2-line,
+.mat-list-item.mat-3-line.mat-list-item-avatar.mat-list-item-with-avatar,
+.mat-list-base .mat-list-item.mat-3-line,
+.mat-list-base .mat-list-item,
+.mat-list-base .mat-list-item.mat-multi-line {   
+    margin: 0 5px 15px 5px;
+    box-shadow: 0 4px 10px rgba(86, 6, 122, 0.38);
+    padding: 10px 5px;
+    height: 100%;
+    width: 45%;
+    background: rgb(255,255,255,0.8);
+    h3{
+        font-weight: bold;
+        font-size: 1.3rem;
+    }
+    .data{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        p{
+            border-left: 1.4px solid black;
+            padding: 0 15px;
+        }
+        p:first-child{
+            padding-right: 0;
+        }
+        p:last-child{
+            border-left:none;
+        }
+    }
+    p{
+        display: flex;
+        vertical-align: middle;
+        font-size: 1.2rem;
+        margin: 5px 0;
+        .material-icons{
+            margin-left: 5px;
+        }
+        .material-icons.celular{
+            color: green;
+        }
+        .material-icons.tel{
+            color: #9c0404;
+        }
+        .material-icons.business{
+            color: purple;
+        }
+    }
+    
+     .mat-list-icon{
+        width: 48px;
+        height: 48px;
+        font-size: 48px;
+    }
+    
+}
+}

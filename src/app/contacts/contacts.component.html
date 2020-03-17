@@ -1,0 +1,42 @@
+<div class="page" *ngIf="isLoaded">
+    <h2>ספר טלפונים</h2>
+    <div class="search-container">
+        <mat-form-field>
+            <input matInput placeholder="חפש איש קשר" name="contact" [formControl]="contact">
+        </mat-form-field>
+    </div>
+    <mat-list *ngIf="filterdContact">
+        <mat-list-item *ngFor="let contact of filterdContact">
+            <i matListIcon class="material-icons">
+                account_circle
+            </i>
+            <h3 matLine> {{contact.firstName}} {{contact.lastName}} </h3>
+            <div matLine class="data">
+                <p *ngIf="contact.celular">
+                    <i class="material-icons celular">phone</i>
+                    {{contact.celular}}
+                </p>
+                <p *ngIf="contact.phone">
+                    <i class="material-icons tel">home</i>
+                    {{contact.phone}}
+                </p>
+                <p *ngIf="contact.celular2">
+                    <i class="material-icons business">business</i>
+                    {{contact.celular2}}
+                </p>
+            </div>
+            <!-- <p matLine *ngIf="contact.celular">
+                <i class="material-icons celular">phone</i>
+                {{contact.celular}}
+            </p>
+            <p matLine *ngIf="contact.phone">
+                <i class="material-icons tel">home</i>
+                {{contact.phone}}
+            </p>
+            <p matLine *ngIf="contact.celular2">
+                <i class="material-icons business">business</i>
+                {{contact.celular2}}
+            </p> -->
+        </mat-list-item>
+    </mat-list>
+</div>

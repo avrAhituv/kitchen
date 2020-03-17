@@ -1,0 +1,32 @@
+.group input, .group textarea, .group .input{
+    margin: 0 0 30px 0 !important;
+}
+ng-select{
+    margin: 0 0 30px 0;
+    border: none;
+}
+timepicker{
+    direction: ltr;
+}
+
+.datetime-picker-wrapper{
+    
+    .datetime-picker{
+       
+    }
+    ::ng-deep div{
+        max-width: unset !important;
+    }
+  
+}
+::ng-deep .ui-datepicker-header .ui-widget-header {
+    max-width: unset !important;
+}
+::ng-deep .ui-datepicker-calendar-container{
+    max-width: unset !important;
+}
+.btn-groups{
+    button{
+        margin: 0 10px;
+    }
+}

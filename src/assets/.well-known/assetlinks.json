@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "xyz.appmaker.obebpo",
+      "sha256_cert_fingerprints": ["CB:6B:63:A0:5E:4C:4B:09:37:B1:58:B2:5E:0F:7B:77:9D:4B:E0:F7:D7:99:CE:36:F2:DF:DA:DB:4E:76:55:70"]
+    }
+  }
+]

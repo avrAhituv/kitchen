@@ -1,4 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://fonts.googleapis.com/css?family=Heebo&display=swap');
+// @import '~ngx-toastr/toastr-bs4-alert';
+.mat-form-field-appearance-legacy .mat-form-field-label,
+.mat-checkbox-layout .mat-checkbox-label,
+.mat-error,
+.mat-card,
+.mat-h1,
+.mat-button-wrapper,.mat-button-toggle-label-content,
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6  {
+    font-family: 'Heebo';
+}
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: 'Heebo'; }
+.dashboard-card {  
+    .mat-card-header div.mat-card-header-text{
+      width: 100% ;
+    }
+  }
+  
