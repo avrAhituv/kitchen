@@ -19,10 +19,11 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ListResultsComponent } from './components/list-results/list-results.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SafeUrlPipe } from './pipes/safe-url.pipe';
 
 
 @NgModule({
-  declarations: [ListResultsComponent],
+  declarations: [ListResultsComponent, SafeUrlPipe],
   imports: [
     CommonModule,
     HttpClientModule,
@@ -64,6 +65,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ReactiveFormsModule,
     MatAutocompleteModule,
     ListResultsComponent,
+    SafeUrlPipe,
     FontAwesomeModule
     // GoogleApiModule
   ]

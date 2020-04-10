@@ -45,6 +45,7 @@ export class ToraLessonsComponent implements OnInit {
 
   search() {
     this.googleSearch.query = this.inputSearch;
+    this.currentItemSelected = undefined;
     this.googleSearch.search().subscribe((r) => console.info(r));
   }
 

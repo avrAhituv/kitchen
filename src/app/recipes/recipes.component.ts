@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { SpeechRecognitionService } from '../shared/services/speech-recognition.service';
 import { CustomGoogleSearchService, CustomSearchEngineEnum } from '../shared/services/custom-google-search.service';
 import { Subscription } from 'rxjs';
-import { DomSanitizer } from '@angular/platform-browser';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { SearchResult } from '../shared/classes/search-result';
 
 @Component({
@@ -45,6 +45,7 @@ export class RecipesComponent implements OnInit, OnDestroy {
 
   search() {
     this.googleSearch.query = this.inputSearch;
+    this.currentItemSelected = undefined;
     this.googleSearch.search().subscribe((r) => console.info(r));
   }
 
@@ -82,10 +83,7 @@ export class RecipesComponent implements OnInit, OnDestroy {
     this.currentItemSelected = item;
     this.isSelected = true;
   }
-  showPageInIframe(url){
-    console.log(url)
-    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
-  }
+
   openInFullScreen(url){
     window.open(url, 'winname', 'directories=no,titlebar=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=1100,height=750');
   }
