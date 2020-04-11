@@ -1,8 +1,8 @@
 <div class="grid-container">
-  <mat-grid-list cols="5" rowHeight="200px">
+  <mat-grid-list cols="4" rowHeight="200px">
     <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
       <a [routerLink]="card.link" routerLinkActive="active">
-        <mat-card class="dashboard-card">
+        <mat-card class="dashboard-card card-back-1">
           <mat-card-header>
             <mat-card-title>
               <fa-icon [icon]="card.icon"></fa-icon>
